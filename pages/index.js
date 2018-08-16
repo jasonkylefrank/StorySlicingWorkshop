@@ -9,16 +9,8 @@ class Index extends React.Component {
         };
     }
 
-    onNameChange = (event) => {
-        this.setState({name: event.currentTarget.value});
-    }
-
-    onAddressChange = (event) => {
-        this.setState({address: event.currentTarget.value});
-    }
-
-    onPhoneChange = (event) => {
-        this.setState({phone: event.currentTarget.value});
+    onChange = (key, event) => {
+        this.setState({[key]: event.target.value});
     }
 
     render() {
@@ -29,19 +21,16 @@ class Index extends React.Component {
                 <h2>Welcom to HAMS!</h2>
                 <div>
                     <label>Name:</label>
-                    <input type="text" onChange={this.onNameChange}>
-                    </input>
+                    <input type="text" onChange={event => this.onChange("name", event)}></input>                   
                 </div>
 
                 <div>
                     <label>Address:</label>
-                    <input type="text" onChange={this.onAddressChange}>
-                    </input>
+                    <input type="text" onChange={event => this.onChange("address", event)}></input>
                 </div>
                 <div>
                     <label>Phone:</label>
-                    <input type="text" onChange={this.onPhoneChange}>
-                    </input>
+                    <input type="text" onChange={event => this.onChange("phone", event)}></input>                   
                 </div>
 
                 <br />
