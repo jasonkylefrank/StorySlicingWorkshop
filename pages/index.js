@@ -7,25 +7,17 @@ class Index extends React.Component {
             address: "Some default address",
             phone: "Some default phone"
         };
-
-        this.onNameChange = this.onNameChange.bind(this);
-        this.onAddressChange = this.onAddressChange.bind(this);
-        this.onPhoneChange = this.onPhoneChange.bind(this);
     }
 
-    onNameChange(event) {
+    onNameChange = (event) => {
         this.setState({name: event.currentTarget.value});
     }
 
-    // onNameChange = (event) => {
-    //     this.setState({name: event.currentTarget.value});
-    // }
-
-    onAddressChange(event) {
+    onAddressChange = (event) => {
         this.setState({address: event.currentTarget.value});
     }
 
-    onPhoneChange(event) {
+    onPhoneChange = (event) => {
         this.setState({phone: event.currentTarget.value});
     }
 
