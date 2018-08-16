@@ -1,12 +1,9 @@
 class Index extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: "Test",
-            address: "Some default address",
-            phone: "Some default phone"
-        };
+    state = {
+        name: "Test",
+        address: "Some default address",
+        phone: "Some default phone"
     }
 
     onChange = (key, event) => {
